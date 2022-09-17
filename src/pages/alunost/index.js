@@ -15,7 +15,7 @@ const turmas = [
   {
     nome: "Nicolas Gabriel Meneses de Jesus",
     matricula: "65951654987951",
-    checkin: new Date().toLocaleString(),
+    checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
     checkout: "..",
     presente: true,
   },
