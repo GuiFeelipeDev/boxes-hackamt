@@ -49,7 +49,10 @@ const Index = () => {
               type="password"
               variant="outlined"
             ></TextField>
-            <Button variant="contained" onClick={() => navigate("/panel")}>
+            <Button
+              variant="contained"
+              onClick={() => navigate("/panel/graficos")}
+            >
               Entrar
             </Button>
           </FormGroup>

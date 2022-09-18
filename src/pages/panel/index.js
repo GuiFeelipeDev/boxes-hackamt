@@ -13,11 +13,12 @@ import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
 import { BsBag } from "react-icons/bs"
 import { FaHome } from "react-icons/fa"
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 
 const drawerWidth = 240
 
 export default function AdminPanel() {
+  let navigate = useNavigate()
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -26,7 +27,13 @@ export default function AdminPanel() {
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ cursor: "pointer" }}
+            onClick={() => navigate("/panel/graficos")}
+          >
             Painel - Ricardo
           </Typography>
         </Toolbar>

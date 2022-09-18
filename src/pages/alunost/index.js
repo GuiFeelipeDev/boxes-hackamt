@@ -13,8 +13,31 @@ import { Box } from "@mui/system"
 
 const turmas = [
   {
-    nome: "Nicolas Gabriel Meneses de Jesus",
-    matricula: "65951654987951",
+    nome: "Ana Maria",
+    matricula: "13654985756491",
+    checkin: "..",
+    checkout: "..",
+    presente: false,
+  },
+
+  {
+    nome: "Bruno Lima",
+    matricula: "23165498495164",
+    checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
+    checkout: "..",
+    presente: true,
+  },
+  {
+    nome: "Carlos Eduardo da Cruz",
+    matricula: "32684951656351",
+    checkin: "..",
+    checkout: "..",
+    presente: false,
+  },
+
+  {
+    nome: "Fabio Ruver",
+    matricula: "15498497951986",
     checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
     checkout: "..",
     presente: true,
@@ -22,9 +45,44 @@ const turmas = [
   {
     nome: "Guilherme Felipe Pereira",
     matricula: "21654621619495",
+    checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
+    checkout: "..",
+    presente: true,
+  },
+  {
+    nome: "Janaina Toredo Machado",
+    matricula: "95487484951648",
     checkin: "..",
     checkout: "..",
     presente: false,
+  },
+  {
+    nome: "Leonardo Ribeiro Alcantara",
+    matricula: "75169693465158",
+    checkin: "..",
+    checkout: "..",
+    presente: false,
+  },
+  {
+    nome: "Nicolas Gabriel Meneses de Jesus",
+    matricula: "65951654987951",
+    checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
+    checkout: "..",
+    presente: true,
+  },
+  {
+    nome: "Ricardo Pulquerio de Campos",
+    matricula: "15649852231659",
+    checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
+    checkout: "..",
+    presente: true,
+  },
+  {
+    nome: "Samira Paola",
+    matricula: "62598745862569",
+    checkin: <BiCheck style={{ fontSize: "30px", color: "green" }} />,
+    checkout: "..",
+    presente: true,
   },
 ]
 
@@ -47,6 +105,7 @@ const Index = () => {
         <Table size="small" aria-label="a dense table">
           <TableHead>
             <TableRow sx={{ minWidth: 650, "& th": { fontSize: "18px" } }}>
+              <TableCell>Nº</TableCell>
               <TableCell>Nome</TableCell>
               <TableCell align="center">Entrada</TableCell>
               <TableCell align="center">Saída</TableCell>
@@ -55,7 +114,7 @@ const Index = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {turmas.map((turma) => (
+            {turmas.map((turma, index) => (
               <TableRow
                 key={turma.nome}
                 sx={{
@@ -63,6 +122,9 @@ const Index = () => {
                   "& th, td": { fontSize: "18px" },
                 }}
               >
+                <TableCell component="th" scope="row">
+                  {index + 1}
+                </TableCell>
                 <TableCell component="th" scope="row">
                   {turma.nome}
                 </TableCell>

@@ -17,45 +17,48 @@ const turmas = [
 const Index = () => {
   let navigate = useNavigate()
   return (
-    <TableContainer component={Paper}>
-      <Table size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow sx={{ minWidth: 650, "& th": { fontSize: "18px" } }}>
-            <TableCell>Turma</TableCell>
-            <TableCell align="right">Tag</TableCell>
-            <TableCell align="right">Periodo</TableCell>
-            <TableCell align="right">Acessar</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {turmas.map((turma) => (
-            <TableRow
-              key={turma.nome}
-              sx={{
-                "&:last-child td, &:last-child th": { border: 0 },
-                "& th, td": { fontSize: "18px" },
-              }}
-            >
-              <TableCell component="th" scope="row">
-                {turma.nome}
-              </TableCell>
-              <TableCell align="right">{turma.tag}</TableCell>
-              <TableCell align="right">{turma.periodo}</TableCell>
-              <TableCell align="right">
-                <BiSearchAlt
-                  style={{
-                    fontSize: "20px",
-                    color: "green",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => navigate("/panel/" + turma.link)}
-                />
-              </TableCell>
+    <>
+      <h2 style={{ marginBottom: "20px" }}>TURMAS</h2>
+      <TableContainer component={Paper}>
+        <Table size="small" aria-label="a dense table">
+          <TableHead>
+            <TableRow sx={{ minWidth: 650, "& th": { fontSize: "18px" } }}>
+              <TableCell>Turma</TableCell>
+              <TableCell align="right">Tag</TableCell>
+              <TableCell align="right">Periodo</TableCell>
+              <TableCell align="right">Acessar</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {turmas.map((turma) => (
+              <TableRow
+                key={turma.nome}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                  "& th, td": { fontSize: "18px" },
+                }}
+              >
+                <TableCell component="th" scope="row">
+                  {turma.nome}
+                </TableCell>
+                <TableCell align="right">{turma.tag}</TableCell>
+                <TableCell align="right">{turma.periodo}</TableCell>
+                <TableCell align="right">
+                  <BiSearchAlt
+                    style={{
+                      fontSize: "20px",
+                      color: "green",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => navigate("/panel/" + turma.link)}
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </>
   )
 }
 
