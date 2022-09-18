@@ -11,8 +11,8 @@ import ListItem from "@mui/material/ListItem"
 import ListItemButton from "@mui/material/ListItemButton"
 import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
-import { BsBag } from "react-icons/bs"
 import { FaHome } from "react-icons/fa"
+import { GrGroup } from "react-icons/gr"
 import { Link, Outlet, useNavigate } from "react-router-dom"
 
 const drawerWidth = 240
@@ -69,7 +69,7 @@ export default function AdminPanel() {
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
-                    <BsBag className="icon-format" />
+                    <GrGroup className="icon-format" />
                   </ListItemIcon>
                   <ListItemText primary="Turmas" />
                 </ListItemButton>

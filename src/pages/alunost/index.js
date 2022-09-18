@@ -140,7 +140,9 @@ const Index = () => {
 
                 <TableCell align="right" scope="row">
                   {turma.presente && (
-                    <BiCheck style={{ fontSize: "30px", color: "green" }} />
+                    <BiCheck
+                      style={{ fontSize: "30px", color: "rgb(212, 160, 16)" }}
+                    />
                   )}
                   {!turma.presente && (
                     <BiX style={{ fontSize: "30px", color: "red" }} />
