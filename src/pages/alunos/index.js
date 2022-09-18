@@ -90,7 +90,10 @@ const Index = () => {
   let navigate = useNavigate()
   return (
     <>
-      <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-end" }}>
+      <Box
+        sx={{ width: "100%", display: "flex", justifyContent: "space-between" }}
+      >
+        <h2>6º Ano A</h2>
         <GrFormRefresh
           style={{
             fontSize: "30px",
